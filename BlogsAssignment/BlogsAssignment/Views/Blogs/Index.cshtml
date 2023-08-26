@@ -1,0 +1,43 @@
+﻿@model List<BlogsAssignment.Models.BlogsProxy>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="row col-md-10">
+    <h2 class="col-md-10">Do You want to post a new Blog?</h2>
+    <a href="/Blogs/Upsert" class="btn btn-primary col-md-2">Add Blog</a>
+</div>
+Or
+<h2>My Drafted Blog's List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Blog Title</th>
+            <th>Author Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if(Model.Count()==0)
+            {
+                <tr>
+                    Uh,Oh !! No Drafted Posts
+                </tr>
+            }
+        else { 
+        foreach (var blog in Model)
+        {
+            <tr>
+                <td>@blog.Title</td>
+                <td>@blog.Author</td>
+                <td>
+                    <a href="/Blogs/Upsert/@blog.Id" class="btn btn-primary">Continue</a>
+                </td>
+            </tr>
+        }
+        }
+    </tbody>
+</table>
+
+
+

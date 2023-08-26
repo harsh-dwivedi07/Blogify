@@ -1,0 +1,47 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var errorMessage = TempData["ErrorMessage"] as string;
+}
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger">
+        @errorMessage
+    </div>
+}
+<h2>Register</h2>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="text-center">Register</h2>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="/Account/RegisterPost">
+                        <div class="form-group mt-md-2">
+                            <label for="userName">Username:</label>
+                            <input type="text" id="userName" name="userName" class="form-control" placeholder="Enter your username" required>
+                        </div>
+                        <div class="form-group mt-md-2">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control" placeholder="Enter your first name" required>
+                        </div>
+                        <div class="form-group mt-md-2">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control" placeholder="Enter your last name" required>
+                        </div>
+                        <div class="form-group mt-md-2">
+                            <label for="password">Password:</label>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+                        </div>
+                        <div class="form-group text-center mt-md-3">
+                            <button type="submit" class="btn btn-primary">Register</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

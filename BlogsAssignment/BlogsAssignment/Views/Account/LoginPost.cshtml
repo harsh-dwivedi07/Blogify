@@ -1,0 +1,41 @@
+﻿@model List<BlogsAssignment.Models.BlogsProxy>
+@{
+    ViewBag.Title = "LoginPost";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var user = Session["CurrentUser"] as BlogsAssignment.Models.CustomUser;
+}
+<div class="row">
+    <h2 class="col-md-8">Hey, @user.Name</h2>
+    <a href="/Blogs/Index" class="btn btn-primary col-md-2 float-right">My Blogs Page</a>
+</div>
+
+<div class="container mt-4">
+    <h2>Blog List</h2>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Blog Title</th>
+                <th>Author Name</th>
+                <th>Published On</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if( Model !=null){
+            foreach (var blog in Model)
+            {
+                <tr>
+                    <td>@blog.Title</td>
+                    <td>@blog.Author</td>
+                    <td>@blog.PublishedDate</td>
+                    <td>
+                        <a href="/Blogs/Get/@blog.Id" class="btn btn-primary">View</a>
+                    </td>
+                </tr>
+            }
+            }
+        </tbody>
+    </table>
+</div>
+
