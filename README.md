@@ -20,6 +20,9 @@ After Successfully Pulling the code, you just need to set your server's name in 
 
 4)- Home Page
 
+![BlogHome](https://github.com/harsh-dwivedi07/Blogify/assets/84399182/7610145c-e2c5-4404-83b8-5b460e6f5898)
+
+
 5)- View Published Post
 
 ![ViewPost1](https://github.com/harsh-dwivedi07/Blogify/assets/84399182/961e9b6a-90e7-4a7e-ac94-275b53883f2c)
@@ -36,6 +39,11 @@ After Successfully Pulling the code, you just need to set your server's name in 
 8)- Edit a Post
 
 ![Edit1](https://github.com/harsh-dwivedi07/Blogify/assets/84399182/84f0a4bc-4161-4659-91d3-e25487abcdfa)
+
+9)- Content is Mandatory if you want to Publish a post.
+
+![Add2](https://github.com/harsh-dwivedi07/Blogify/assets/84399182/8822e4b9-1191-45a8-9447-710e8d217b55)
+
 
 
 
