@@ -73,7 +73,11 @@ namespace BlogsAssignment.Controllers
                     if (action == "published")
                     {
                         post.Status = BlogsAssignment.Utility.Constants.Published;
-
+                        if(post.Content == null)
+                        {
+                            TempData["ErrorMessage"] = "Add Content, if you want to publish.";
+                            return View("Upsert");
+                        }
                     }
 
                     else
